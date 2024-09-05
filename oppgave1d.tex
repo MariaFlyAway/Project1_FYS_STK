@@ -86,8 +86,8 @@ left=20mm,right=20mm, top = 25mm, bottom = 25mm}
     V(\hat \beta) &= V((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{y})\\
     &= V((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T(\boldsymbol{X}\boldsymbol{\beta} + \epsilon))\\
     &= V((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{X}\boldsymbol{\beta}) + V((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T \epsilon)\\
-    &= ((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T)^2 V(\epsilon)\\
-    &= ---\\
+    &= ((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T) V(\epsilon) ((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T)^T\\
+    &= (\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{X}(\boldsymbol{X})^{-1} (\boldsymbol{X}^T)^{-1}\sigma^2\\
     &= (\boldsymbol{X}^T\boldsymbol{X})^{-1}\sigma^2
 \end{align*}
 
