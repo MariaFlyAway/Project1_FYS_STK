@@ -91,4 +91,26 @@ left=20mm,right=20mm, top = 25mm, bottom = 25mm}
     &= (\boldsymbol{X}^T\boldsymbol{X})^{-1}\sigma^2
 \end{align*}
 
+\textbf{e)}
+
+\begin{align*}
+    E\left[(\boldsymbol{y} - \boldsymbol{\tilde y})^2\right] &= E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}) + E(\boldsymbol{\tilde y}) - \boldsymbol{\tilde y})^2\right]\\
+    &= E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}))^2 + 2(\boldsymbol{y} - E(\boldsymbol{\tilde y}))(E(\boldsymbol{\tilde y}) - \boldsymbol{\tilde y}) + (\boldsymbol{\tilde y} - E(\boldsymbol{\tilde y}))^2\right]\\
+    &= E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}))^2\right] + 2E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}))(E(\boldsymbol{\tilde y}) - \boldsymbol{\tilde y})\right] + E\left[(\boldsymbol{\tilde y} - E(\boldsymbol{\tilde y}))^2\right]\\
+\end{align*}
+
+\begin{align*}
+    E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}))^2\right] &= E\left[(f(x) + \epsilon - E(\boldsymbol{\tilde y}))^2\right]\\
+    &= E\left[(f(x)-\boldsymbol{\tilde y})^2 - 2(\epsilon(E(\boldsymbol{\tilde y}) - f(x))) + \epsilon^2\right]\\
+    &= E\left[(f(x)-\boldsymbol{\tilde y})^2\right] - 2E\left[\epsilon(E(\boldsymbol{\tilde y}) - f(x))\right] + E[\epsilon^2]\\
+    &= E\left[(\boldsymbol{\tilde y}-f(x))^2\right] - 2E[\epsilon]E\left[E(\boldsymbol{\tilde y}) - f(x)\right]+ \sigma^2\\
+    &= E\left[(\boldsymbol{\tilde y}-f(x))^2\right] + \sigma^2
+\end{align*}
+
+\begin{align*}
+    E\left[(\boldsymbol{y} - \boldsymbol{\tilde y})^2\right] &= (E\left[(\boldsymbol{\tilde y}-f(x))^2\right] + \sigma^2) + 2(E(\boldsymbol{\tilde y}) - \boldsymbol{y})E\left[(\boldsymbol{\tilde y} - E(\boldsymbol{\tilde y}))\right]+V(\boldsymbol{\tilde y})\\
+    &= Bias[\boldsymbol{\tilde y}]^2 + 2(E(\boldsymbol{\tilde y}) - \boldsymbol{y})(E(\boldsymbol{\tilde y}) - E(\boldsymbol{\tilde y})) + V(\tilde y) + \sigma^2\\
+    &= Bias[\boldsymbol{\tilde y}]^2 + V(\tilde y) + \sigma^2
+\end{align*}
+
 \end{document}
