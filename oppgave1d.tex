@@ -68,27 +68,31 @@ left=20mm,right=20mm, top = 25mm, bottom = 25mm}
 \end{align*}
 
 \begin{align*}
-    V(y_i) &= V(\beta_0 + \beta_1x_{i1} + \dots + \beta_{n-1} x_{i n-1} + \epsilon)\\
+    V(y_i) &= V(f(x_i) + \epsilon)\\
+    &= V(\beta_0 + \beta_1x_{i1} + \dots + \beta_{n-1} x_{i n-1} + \epsilon)\\
     &= V(\beta_0 + \beta_1x_{i1} + \dots + \beta_{n-1} x_{i n-1}) + V(\epsilon)\\
     &= V(\epsilon)\\
     &= \sigma^2
 \end{align*}
 
 \begin{align*}
-    E(\hat \beta) &= E((\boldsymbol{X}^T \boldsymbol{X})^{-1})\boldsymbol{X}^T \boldsymbol{y}\\
-    &= E((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T(\boldsymbol{X}\boldsymbol{\beta} + \epsilon))\\
-    &= E((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{X}\boldsymbol{\beta}) + E((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\epsilon)\\
-    &=E(\boldsymbol{\beta}) + (\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^TE(\epsilon)\\
+    E(\hat \beta) &= E[(\boldsymbol{X}^T \boldsymbol{X})^{-1}\boldsymbol{X}^T \boldsymbol{y}]\\
+    &= E[(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T(\boldsymbol{X}\boldsymbol{\beta} + \epsilon)]\\
+    &= E[(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{X}\boldsymbol{\beta}] + 
+    E[(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\epsilon]\\
+    &=E[\boldsymbol{\beta}] + (\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^TE[\epsilon]\\
     &= \boldsymbol{\beta}
 \end{align*}
 
 \begin{align*}
-    V(\hat \beta) &= V((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{y})\\
-    &= V((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T(\boldsymbol{X}\boldsymbol{\beta} + \epsilon))\\
-    &= V((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{X}\boldsymbol{\beta}) + V((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T \epsilon)\\
-    &= ((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T) V(\epsilon) ((\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T)^T\\
-    &= (\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{X}(\boldsymbol{X})^{-1} (\boldsymbol{X}^T)^{-1}\sigma^2\\
-    &= (\boldsymbol{X}^T\boldsymbol{X})^{-1}\sigma^2
+    V(\hat \beta) &= V[(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{y}]\\
+    &= [(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T] \; V[\boldsymbol{y}] \;
+    [(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T]^T\\
+    &= [(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T] \; \sigma^2 \boldsymbol{I} \;
+    [\boldsymbol{X}(\boldsymbol{X}^T\boldsymbol{X})^{-1}]\\
+    &= \sigma^2 [(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T
+    \boldsymbol{X}(\boldsymbol{X}^T\boldsymbol{X})^{-1}]\\
+    &= \sigma^2 (\boldsymbol{X}^T\boldsymbol{X})^{-1}
 \end{align*}
 
 \textbf{e)}
