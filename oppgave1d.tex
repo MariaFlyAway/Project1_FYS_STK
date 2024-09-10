@@ -62,11 +62,13 @@ left=20mm,right=20mm, top = 25mm, bottom = 25mm}
 \begin{document}
 
 \begin{align*}
-    E(y_i) &= E(\beta_0 + \beta_1x_{i1} + \dots + \beta_{n-1} x_{i n-1} + \epsilon)\\
+    E(y_i) &= E(f(x_i) + \epsilon)\\
+    &= E(\beta_0 + \beta_1x_{i1} + \dots + \beta_{n-1} x_{i n-1} + \epsilon)\\
     &= E\left(\sum_{j=0}^{n-1}\beta_{j}x_{ij}\right) + E(\epsilon)\\
     &= \sum_{j=0}^{n-1}\beta_{j}x_{ij}
 \end{align*}
-
+Where we've used the linearity of expectation.\\[10pt]
+%
 \begin{align*}
     V(y_i) &= V(f(x_i) + \epsilon)\\
     &= V(\beta_0 + \beta_1x_{i1} + \dots + \beta_{n-1} x_{i n-1} + \epsilon)\\
@@ -74,16 +76,16 @@ left=20mm,right=20mm, top = 25mm, bottom = 25mm}
     &= V(\epsilon)\\
     &= \sigma^2
 \end{align*}
-
+Where we've used that the variance is invariant.\\[20pt]
+%
 \begin{align*}
     E(\hat \beta) &= E[(\boldsymbol{X}^T \boldsymbol{X})^{-1}\boldsymbol{X}^T \boldsymbol{y}]\\
-    &= E[(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T(\boldsymbol{X}\boldsymbol{\beta} + \epsilon)]\\
-    &= E[(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{X}\boldsymbol{\beta}] + 
-    E[(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\epsilon]\\
-    &=E[\boldsymbol{\beta}] + (\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^TE[\epsilon]\\
+    &= (\boldsymbol{X}^T \boldsymbol{X})^{-1}\boldsymbol{X}^T E[\boldsymbol{y}]\\
+    &= (\boldsymbol{X}^T \boldsymbol{X})^{-1}\boldsymbol{X}^T \boldsymbol{X \beta}\\
     &= \boldsymbol{\beta}
 \end{align*}
-
+Where we've again used the linearity of the expectation.\\[10pt]
+%
 \begin{align*}
     V(\hat \beta) &= V[(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T\boldsymbol{y}]\\
     &= [(\boldsymbol{X}^T\boldsymbol{X})^{-1} \boldsymbol{X}^T] \; V[\boldsymbol{y}] \;
@@ -94,15 +96,16 @@ left=20mm,right=20mm, top = 25mm, bottom = 25mm}
     \boldsymbol{X}(\boldsymbol{X}^T\boldsymbol{X})^{-1}]\\
     &= \sigma^2 (\boldsymbol{X}^T\boldsymbol{X})^{-1}
 \end{align*}
-
-\textbf{e)}
-
+Where we've used that if $\boldsymbol{A}$ is a contant matrix, 
+$V(\boldsymbol{AX}) = \boldsymbol{A} V(\boldsymbol{X}) \boldsymbol{A}^T$.
+\textbf{e)}\\
+Derivation of the bias-variance tradeoff:
 \begin{align*}
     E\left[(\boldsymbol{y} - \boldsymbol{\tilde y})^2\right] &= E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}) + E(\boldsymbol{\tilde y}) - \boldsymbol{\tilde y})^2\right]\\
     &= E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}))^2 + 2(\boldsymbol{y} - E(\boldsymbol{\tilde y}))(E(\boldsymbol{\tilde y}) - \boldsymbol{\tilde y}) + (\boldsymbol{\tilde y} - E(\boldsymbol{\tilde y}))^2\right]\\
     &= E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}))^2\right] + 2E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}))(E(\boldsymbol{\tilde y}) - \boldsymbol{\tilde y})\right] + E\left[(\boldsymbol{\tilde y} - E(\boldsymbol{\tilde y}))^2\right]\\
 \end{align*}
-
+The first term in the expression above can be simplified as follows:
 \begin{align*}
     E\left[(\boldsymbol{y} - E(\boldsymbol{\tilde y}))^2\right] &= E\left[(f(x) + \epsilon - E(\boldsymbol{\tilde y}))^2\right]\\
     &= E\left[(f(x)-\boldsymbol{\tilde y})^2 - 2(\epsilon(E(\boldsymbol{\tilde y}) - f(x))) + \epsilon^2\right]\\
@@ -110,7 +113,7 @@ left=20mm,right=20mm, top = 25mm, bottom = 25mm}
     &= E\left[(f(x) - \boldsymbol{\tilde y})^2\right] - 2E[\epsilon]E\left[E(\boldsymbol{\tilde y}) - f(x)\right]+ \sigma^2\\
     &= E\left[(f(x)-\boldsymbol{\tilde y})^2\right] + \sigma^2
 \end{align*}
-
+If we now substitute this expression in () we get:
 \begin{align*}
     E\left[(\boldsymbol{y} - \boldsymbol{\tilde y})^2\right] &= (E\left[f(x)-(\boldsymbol{\tilde y})^2\right] + \sigma^2) + 2(E(\boldsymbol{\tilde y}) - \boldsymbol{y})E\left[(\boldsymbol{\tilde y} - E(\boldsymbol{\tilde y}))\right]+V(\boldsymbol{\tilde y})\\
     &= Bias[\boldsymbol{\tilde y}]^2 + 2(E(\boldsymbol{\tilde y}) - \boldsymbol{y})(E(\boldsymbol{\tilde y}) - E(\boldsymbol{\tilde y})) + V(\tilde y) + \sigma^2\\
