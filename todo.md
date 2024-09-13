@@ -31,10 +31,10 @@ Figures for report: last subplot of beta-parameters? Plots of (the best?) predic
 
 ### e)
 - DONE make fig 2.11 Hastie
-- derive bias-variance tradeoff formula - include in theory-section
-- explain what the terms mean and discuss their interpretations
+- DONE derive bias-variance tradeoff formula - TODO *include in theory-section*
+-    explain what the terms mean and discuss their interpretations
 - Perform a bias-variance analysis of the Franke by studying the MSE value as a function of the model complexity
-and the number of datapoints and 
+and the ''number of datapoints''
 - bootstrap-implementation - used for analysis and discussion
 Figures for report: fig. 2.11 Hastie remake, 
 
@@ -51,6 +51,6 @@ Figures for report: fig. 2.11 Hastie remake,
 - prepare inputs to code
 
 
-### Priorities
+#### Priorities
 
-Finish a-c so that we can continue working on the other tasks
+Starting work on report
