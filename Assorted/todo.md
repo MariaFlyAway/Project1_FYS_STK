@@ -48,6 +48,40 @@ and the number of datapoints and
 - prepare inputs to code
 
 
-### Priorities
+## Report
 
-Finish a-c so that we can continue working on the other tasks
+Figures and data to be included in report
+
+### a)
+
+Results: MSE and R2-score as a function of model compelxity for OLS
+Discussion: Critical discussion of why we chose to sclae/not scale our data
+
+### b) 
+
+Results: Same analysis as above but for different $\lambda$-values
+Discussion: Compare results with those from a). Study the dependence on $\lambda$
+
+### c)
+
+Results: Same analysis as above but for different $\lambda$-values
+Discussion: Compare results with those from a). Study the dependence on $\lambda$. Give a critical discussion of the three methods and a judgement of which model fits the data best. 
+
+### d)
+
+Theory: derivation of various properties
+
+### e)
+
+Theory: derivation of bias-variance tradeoff
+Results: reproduce figure 2.11 from Hastie, Tibshirani and Friedman. Bias-variance analysis of the Franke Function by studying the MSE value as a function of the complexity of the model.
+Discussion: discuss the bias and variance tradeoff as a function of the model complexity, number of datapoints and training and test data using the bootstrap resampling method. 
+
+### f)
+
+Results: MSE as a function resulting from the test folds
+Discussion: compare results from bootstrap, use 5-10 folds - OLS, Ridge and Lasso
+
+### g)
+
+All of the above
