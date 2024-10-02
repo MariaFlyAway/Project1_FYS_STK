@@ -19,7 +19,7 @@ Contains .tex-files for exercise 1d.
 
 Contains all files related to exercise 1g, fitting of topographical data. 
 - `Fitting_topographical_data`: fitting of data with OLS, Ridge and Lasso with cross validation and bootstrap
-- `gridsearch`: implements gridsearch for finding optimal parameters for OLS, Ridge and Lasso as well as the optimal model for higehr degree fits
+- `gridsearch`: implements gridsearch for finding optimal parameters for OLS, Ridge and Lasso as well as the optimal model for higher degree fits
 - `modyfying_dataset`: Reads in the topographical data, displays it and writes it to `topographical_data.npy`
 - `report_plots`: contains code for making visualizations for the report
 
