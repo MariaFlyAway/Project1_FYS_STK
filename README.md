@@ -6,6 +6,9 @@ This project aims to find the optimal model for fitting topographical data for G
 ## Project Structure
 The project is organized into several directories.
 
+### `Additional_plots/`
+Contains some additional plots not present in the report
+
 ### `Exercises/`
 Contains notebooks for solution of all exercises except 1d and 1g.
 
