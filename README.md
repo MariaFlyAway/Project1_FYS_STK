@@ -6,22 +6,31 @@ This project aims to find the optimal model for fitting topographical data for G
 ## Project Structure
 The project is organized into several directories.
 
-### `Regression and Resampling Methods Topographical Analysis with Ordinary Least Squares, Ridge and Lasso Regression`
-The report written for this project in pdf-format
+### `Report/`
+Contains the report written for this project in pdf-format
 
-### `Additional_plots/`
+#### `Regression and Resampling Methods Topographical Analysis with Ordinary Least Squares, Ridge and Lasso Regression`
+The report
+
+#### `ChatGPT_conversations`
+Contains links to ChatGPT conversations
+
+### `Code/`
+Contains all code used in the project
+
+#### `Additional_plots/`
 Contains some additional plots not present in the report.
 
 ### `Exercises/`
 Contains notebooks for solution of all exercises except 1d and 1g.
 
-### `Latex/`
+#### `Latex/`
 Contains .tex-files for exercise 1d.
 
 - **`Images/`**:
   - Contains all figures included in the report
  
-### `Topographical_dataset`
+#### `Topographical_dataset`
 
 Contains all files related to exercise 1g. 
 - `Fitting_topographical_data`: fitting of data with OLS, Ridge and Lasso with cross validation and bootstrap.
