@@ -1,3 +1,4 @@
+ChatGPT was used to generate ideas and helped us in writing the first draft for the report. This was later extensively revised.
 Examples of prompting of ChatGPT for writing of report:
 
 Report title suggestions:
@@ -8,3 +9,6 @@ https://chatgpt.com/share/66fbe1eb-4f2c-8013-a94e-a1a889e06c66
 
 Regression analysis report intro:
 https://chatgpt.com/share/66fbe260-4000-8013-b9fc-65ef70cda48a
+
+In coding, we also use GPT for matplotlib-syntax, with questions one would previously use their documentation for such as
+"How to use twinx in plt?" or "How to get a joint label for subplots in plt?".

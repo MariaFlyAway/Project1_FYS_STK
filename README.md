@@ -7,7 +7,7 @@ This project aims to find the optimal model for fitting topographical data for G
 The project is organized into several directories.
 
 ### `Additional_plots/`
-Contains some additional plots not present in the report
+Contains some additional plots not present in the report.
 
 ### `Exercises/`
 Contains notebooks for solution of all exercises except 1d and 1g.
@@ -20,11 +20,11 @@ Contains .tex-files for exercise 1d.
  
 ### `Topographical_dataset`
 
-Contains all files related to exercise 1g, fitting of topographical data. 
-- `Fitting_topographical_data`: fitting of data with OLS, Ridge and Lasso with cross validation and bootstrap
-- `gridsearch`: implements gridsearch for finding optimal parameters for OLS, Ridge and Lasso as well as the optimal model for higher degree fits
-- `modyfying_dataset`: Reads in the topographical data, displays it and writes it to `topographical_data.npy`
-- `report_plots`: contains code for making visualizations for the report
+Contains all files related to exercise 1g. 
+- `Fitting_topographical_data`: fitting of data with OLS, Ridge and Lasso with cross validation and bootstrap.
+- `gridsearch`: implements gridsearch for finding optimal parameters for OLS, Ridge and Lasso as well as the optimal model for higher degree fits.
+- `modyfying_dataset`: Reads in the topographical data, displays it and writes it to `topographical_data.npy`.
+- `report_plots`: contains code for making visualizations for the report.
 
 ## License
 
