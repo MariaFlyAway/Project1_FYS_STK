@@ -21,7 +21,7 @@ Contains all code used in the project
 #### `Additional_plots/`
 Contains some additional plots not present in the report.
 
-### `Exercises/`
+#### `Exercises/`
 Contains notebooks for solution of all exercises except 1d and 1g.
 
 #### `Latex/`
