@@ -6,6 +6,9 @@ This project aims to find the optimal model for fitting topographical data for G
 ## Project Structure
 The project is organized into several directories.
 
+### `Regression and Resampling Methods Topographical Analysis with Ordinary Least Squares, Ridge and Lasso Regression`
+The report written for this project in pdf-format
+
 ### `Additional_plots/`
 Contains some additional plots not present in the report.
 
