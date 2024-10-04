@@ -28,7 +28,7 @@ Contains all files related to exercise 1g.
 
 ## License
 
-The data used in this project is licensed under the Creative Commons Attribution 4.0 International Licence - see the [LICENSE]: Topographical_dataset/_Lisens_License.txt for details
+The data used in this project is licensed under the Creative Commons Attribution 4.0 International Licence - see the [LICENSE]: Topographical_dataset/_Lisens_License.txt for details.
 
 ## Contributors
 - **Jonas Jørgensen Telle**
